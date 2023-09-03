@@ -1,23 +1,19 @@
-//
-//  ContentView.swift
-//  BmstuSchedule
-//
-//  Created by Всеволод on 02.09.2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     @StateObject var model = ScheduleViewModel()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            ForEach(model.days.items) { day in
+                List(day.lessons.items) { lesson in
+                    Text(lesson.name)
+                        .bold()
+                }
+            }
         }
-        .padding()
+        .tabViewStyle(.page(indexDisplayMode: .always))
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
         .onAppear {
             model.fetchData()
         }

@@ -1,6 +1,6 @@
 import Foundation
 
-struct SortedArray<Element: Comparable> {
+struct SortedArray<Element: Comparable & Identifiable> {
     var items = [Element]()
 
     init(items: [Element]? = nil) {

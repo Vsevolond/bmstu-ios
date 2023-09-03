@@ -1,6 +1,7 @@
 import Foundation
 
-struct DayViewObject {
+struct DayViewObject: Identifiable {
+    var id = UUID()
     var day: Int
     var lessons: SortedArray<LessonViewObject>
 

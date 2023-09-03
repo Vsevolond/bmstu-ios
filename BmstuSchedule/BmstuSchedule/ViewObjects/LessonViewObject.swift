@@ -1,6 +1,7 @@
 import Foundation
 
-struct LessonViewObject {
+struct LessonViewObject: Identifiable {
+    var id = UUID()
     var name: String
     var type: String
     var office: String
