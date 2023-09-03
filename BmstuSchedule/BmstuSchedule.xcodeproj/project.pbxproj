@@ -11,6 +11,17 @@
 		A01CBDFA2AA369A8009B73DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01CBDF92AA369A8009B73DD /* ContentView.swift */; };
 		A01CBDFC2AA369AA009B73DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01CBDFB2AA369AA009B73DD /* Assets.xcassets */; };
 		A01CBDFF2AA369AA009B73DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01CBDFE2AA369AA009B73DD /* Preview Assets.xcassets */; };
+		EF7C89C82AA3C2C80010C9FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EF7C89C72AA3C2C80010C9FB /* FirebaseFirestore */; };
+		EF7C89CA2AA3C2C80010C9FB /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EF7C89C92AA3C2C80010C9FB /* FirebaseFirestoreCombine-Community */; };
+		EF7C89CC2AA3C2C80010C9FB /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EF7C89CB2AA3C2C80010C9FB /* FirebaseFirestoreSwift */; };
+		EF7C89CE2AA3C3250010C9FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF7C89CD2AA3C3250010C9FB /* GoogleService-Info.plist */; };
+		EF7C89D42AA3C6520010C9FB /* LessonNetworkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C89D32AA3C6520010C9FB /* LessonNetworkObject.swift */; };
+		EF7C89D62AA3C8420010C9FB /* DayNetworkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C89D52AA3C8420010C9FB /* DayNetworkObject.swift */; };
+		EF7C89D92AA3C9290010C9FB /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C89D82AA3C9290010C9FB /* ScheduleViewModel.swift */; };
+		EF7C89DB2AA48C2B0010C9FB /* DayViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C89DA2AA48C2B0010C9FB /* DayViewObject.swift */; };
+		EF7C89DD2AA48C3C0010C9FB /* LessonViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C89DC2AA48C3C0010C9FB /* LessonViewObject.swift */; };
+		EF7C89E02AA491590010C9FB /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C89DF2AA491590010C9FB /* TimeIntervalExtension.swift */; };
+		EF7C89E32AA49AAA0010C9FB /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C89E22AA49AAA0010C9FB /* SortedArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +30,14 @@
 		A01CBDF92AA369A8009B73DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A01CBDFB2AA369AA009B73DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01CBDFE2AA369AA009B73DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF7C89CD2AA3C3250010C9FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF7C89D32AA3C6520010C9FB /* LessonNetworkObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonNetworkObject.swift; sourceTree = "<group>"; };
+		EF7C89D52AA3C8420010C9FB /* DayNetworkObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayNetworkObject.swift; sourceTree = "<group>"; };
+		EF7C89D82AA3C9290010C9FB /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		EF7C89DA2AA48C2B0010C9FB /* DayViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewObject.swift; sourceTree = "<group>"; };
+		EF7C89DC2AA48C3C0010C9FB /* LessonViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewObject.swift; sourceTree = "<group>"; };
+		EF7C89DF2AA491590010C9FB /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
+		EF7C89E22AA49AAA0010C9FB /* SortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7C89C82AA3C2C80010C9FB /* FirebaseFirestore in Frameworks */,
+				EF7C89CA2AA3C2C80010C9FB /* FirebaseFirestoreCombine-Community in Frameworks */,
+				EF7C89CC2AA3C2C80010C9FB /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +73,12 @@
 		A01CBDF62AA369A8009B73DD /* BmstuSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				EF7C89E12AA49A9D0010C9FB /* Tools */,
+				EF7C89DE2AA491470010C9FB /* Extensions */,
+				EF7C89D72AA3C8CE0010C9FB /* ViewModels */,
+				EF7C89D22AA3C63E0010C9FB /* ViewObjects */,
+				EF7C89D12AA3C6320010C9FB /* NetworkObjects */,
+				EF7C89CD2AA3C3250010C9FB /* GoogleService-Info.plist */,
 				A01CBDF72AA369A8009B73DD /* BmstuScheduleApp.swift */,
 				A01CBDF92AA369A8009B73DD /* ContentView.swift */,
 				A01CBDFB2AA369AA009B73DD /* Assets.xcassets */,
@@ -65,6 +93,48 @@
 				A01CBDFE2AA369AA009B73DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF7C89D12AA3C6320010C9FB /* NetworkObjects */ = {
+			isa = PBXGroup;
+			children = (
+				EF7C89D32AA3C6520010C9FB /* LessonNetworkObject.swift */,
+				EF7C89D52AA3C8420010C9FB /* DayNetworkObject.swift */,
+			);
+			path = NetworkObjects;
+			sourceTree = "<group>";
+		};
+		EF7C89D22AA3C63E0010C9FB /* ViewObjects */ = {
+			isa = PBXGroup;
+			children = (
+				EF7C89DA2AA48C2B0010C9FB /* DayViewObject.swift */,
+				EF7C89DC2AA48C3C0010C9FB /* LessonViewObject.swift */,
+			);
+			path = ViewObjects;
+			sourceTree = "<group>";
+		};
+		EF7C89D72AA3C8CE0010C9FB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EF7C89D82AA3C9290010C9FB /* ScheduleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EF7C89DE2AA491470010C9FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF7C89DF2AA491590010C9FB /* TimeIntervalExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF7C89E12AA49A9D0010C9FB /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				EF7C89E22AA49AAA0010C9FB /* SortedArray.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +153,11 @@
 			dependencies = (
 			);
 			name = BmstuSchedule;
+			packageProductDependencies = (
+				EF7C89C72AA3C2C80010C9FB /* FirebaseFirestore */,
+				EF7C89C92AA3C2C80010C9FB /* FirebaseFirestoreCombine-Community */,
+				EF7C89CB2AA3C2C80010C9FB /* FirebaseFirestoreSwift */,
+			);
 			productName = BmstuSchedule;
 			productReference = A01CBDF42AA369A8009B73DD /* BmstuSchedule.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +186,9 @@
 				Base,
 			);
 			mainGroup = A01CBDEB2AA369A8009B73DD;
+			packageReferences = (
+				EF7C89C62AA3C2C80010C9FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A01CBDF52AA369A8009B73DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +205,7 @@
 			files = (
 				A01CBDFF2AA369AA009B73DD /* Preview Assets.xcassets in Resources */,
 				A01CBDFC2AA369AA009B73DD /* Assets.xcassets in Resources */,
+				EF7C89CE2AA3C3250010C9FB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +216,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7C89D62AA3C8420010C9FB /* DayNetworkObject.swift in Sources */,
 				A01CBDFA2AA369A8009B73DD /* ContentView.swift in Sources */,
+				EF7C89DD2AA48C3C0010C9FB /* LessonViewObject.swift in Sources */,
 				A01CBDF82AA369A8009B73DD /* BmstuScheduleApp.swift in Sources */,
+				EF7C89E32AA49AAA0010C9FB /* SortedArray.swift in Sources */,
+				EF7C89D92AA3C9290010C9FB /* ScheduleViewModel.swift in Sources */,
+				EF7C89DB2AA48C2B0010C9FB /* DayViewObject.swift in Sources */,
+				EF7C89D42AA3C6520010C9FB /* LessonNetworkObject.swift in Sources */,
+				EF7C89E02AA491590010C9FB /* TimeIntervalExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +425,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF7C89C62AA3C2C80010C9FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF7C89C72AA3C2C80010C9FB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF7C89C62AA3C2C80010C9FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		EF7C89C92AA3C2C80010C9FB /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF7C89C62AA3C2C80010C9FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		EF7C89CB2AA3C2C80010C9FB /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF7C89C62AA3C2C80010C9FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A01CBDEC2AA369A8009B73DD /* Project object */;
 }
