@@ -7,9 +7,9 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView(selection: $selectedIndex) {
-                ForEach(model.days.items) { day in
+                ForEach(model.days.items.indices, id: \.self) { index in
                     List {
-                        ForEach(day.lessons.items) { lesson in
+                        ForEach(model.days.items[index].lessons.items) { lesson in
                             LessonView(lesson: lesson)
                         }
                         .listRowSeparator(.hidden)
