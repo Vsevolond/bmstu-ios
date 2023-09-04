@@ -7,22 +7,22 @@ struct LessonViewObject: Identifiable {
     var office: String
     var teacher: String
     var teacherName: String
-    var startTime: TimeInterval
-    var endTime: TimeInterval
-    
+    var startTime: String
+    var endTime: String
+
     enum LessonType: String, CaseIterable {
         case lecture = "Лекция"
         case seminar = "Семинар"
         case laboratory = "Лабораторная"
     }
-    
+
     init(from networkObject: LessonNetworkObject) {
         self.name = networkObject.name
         self.office = networkObject.office ?? ""
         self.teacher = networkObject.teacher ?? ""
         self.teacherName = networkObject.teacherName ?? ""
-        self.startTime = .getTimeInterval(from: networkObject.startTime)
-        self.endTime = .getTimeInterval(from: networkObject.endTime)
+        self.startTime = networkObject.startTime
+        self.endTime = networkObject.endTime
         
         if let typeNumber = networkObject.type {
             self.type = LessonType.allCases[typeNumber].rawValue
@@ -42,6 +42,14 @@ struct LessonViewObject: Identifiable {
                 self.type = LessonType.allCases[typeNumerator].rawValue
             }
         }
+    }
+
+    func startTimeInterval() -> TimeInterval {
+        .getTimeInterval(from: startTime)
+    }
+
+    func endTimeInterval() -> TimeInterval {
+        .getTimeInterval(from: endTime)
     }
 }
 
