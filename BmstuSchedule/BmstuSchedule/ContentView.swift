@@ -102,6 +102,15 @@ struct TabbarItem: View {
 struct LessonView: View {
     let lesson: LessonViewObject
     @State var isFullName = false
+    @State var isStarted = false
+    @State var currentValue: Double?
+    @State var leftTime: String?
+    
+    let timer = Timer.publish(
+        every: 1,
+        on: .current,
+        in: .common
+    ).autoconnect()
 
     var body: some View {
         VStack {
@@ -138,9 +147,28 @@ struct LessonView: View {
                     }
                 }
             }
-            Gauge(value: 0.5) {
-                Text("Осталось 1ч 15м")
-            }.gaugeStyle(LinearTextInsideGaugeStyle())
+            if isStarted {
+                Gauge(value: currentValue ?? 0) {
+                    Text("Осталось \(leftTime ?? "")")
+                }.gaugeStyle(LinearTextInsideGaugeStyle())
+            }
+        }
+        .onAppear(perform: {
+            updateTime()
+        })
+        .onReceive(timer) { _ in
+            updateTime()
+        }
+    }
+
+    private func updateTime() {
+        isStarted = lesson.isStarted()
+        if isStarted {
+            currentValue = lesson.currentValue()
+            leftTime = lesson.leftTime()
+        } else {
+            currentValue = nil
+            leftTime = nil
         }
     }
 }

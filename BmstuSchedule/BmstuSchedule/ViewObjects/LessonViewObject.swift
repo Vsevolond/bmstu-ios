@@ -9,6 +9,7 @@ struct LessonViewObject: Identifiable {
     var teacherName: String
     var startTime: String
     var endTime: String
+    var day: Int
 
     enum LessonType: String, CaseIterable {
         case lecture = "Лекция"
@@ -23,6 +24,7 @@ struct LessonViewObject: Identifiable {
         self.teacherName = networkObject.teacherName ?? ""
         self.startTime = networkObject.startTime
         self.endTime = networkObject.endTime
+        self.day = networkObject.day
         
         if let typeNumber = networkObject.type {
             self.type = LessonType.allCases[typeNumber].rawValue
@@ -50,6 +52,47 @@ struct LessonViewObject: Identifiable {
 
     func endTimeInterval() -> TimeInterval {
         .getTimeInterval(from: endTime)
+    }
+
+    func isStarted() -> Bool {
+        let currentDate = Date()
+        let timeZone = Double(TimeZone.current.secondsFromGMT())
+        let day = Calendar.current.component(.weekdayOrdinal, from: currentDate.addingTimeInterval(timeZone))
+
+        guard self.day == day else {
+            return false
+        }
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let currentTime = dateFormatter.string(from: currentDate)
+        let currentTimeInterval = TimeInterval.getTimeInterval(from: currentTime)
+
+        return (TimeInterval.getTimeInterval(from: startTime) <= currentTimeInterval)
+        && (TimeInterval.getTimeInterval(from: endTime) > currentTimeInterval)
+    }
+
+    func currentValue() -> Double {
+        let currentDate = Date()
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let currentTime = dateFormatter.string(from: currentDate)
+        let currentTimeInterval = TimeInterval.getTimeInterval(from: currentTime)
+        
+        return (currentTimeInterval - TimeInterval.getTimeInterval(from: startTime))
+        / (TimeInterval.getTimeInterval(from: endTime) - TimeInterval.getTimeInterval(from: startTime))
+    }
+
+    func leftTime() -> String {
+        let currentDate = Date()
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let currentTime = dateFormatter.string(from: currentDate)
+        let currentTimeInterval = TimeInterval.getTimeInterval(from: currentTime)
+        
+        return (TimeInterval.getTimeInterval(from: endTime) - currentTimeInterval).stringHoursAndMinutes()
     }
 }
 
