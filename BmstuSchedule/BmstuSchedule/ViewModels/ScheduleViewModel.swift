@@ -1,24 +1,32 @@
-import Foundation
+import Combine
 import FirebaseFirestore
-import FirebaseFirestoreSwift
+import FirebaseFirestoreCombineSwift
 
 class ScheduleViewModel: ObservableObject {
     @Published var days = SortedArray<DayViewObject>()
-    private let collection = "IU9-52B"
+    private var cancellable: AnyCancellable?
+    private let service = FirebaseService()
+    
+    init() {
+        fetchData()
+    }
 
-    private var db = Firestore.firestore()
-
-    func fetchData() {
-        db.collection(collection).addSnapshotListener { snapshot, error in
-            guard let documents = snapshot?.documents else {
-                print("No documents")
-                return
-            }
-
-            let dayNetworkObjects = documents.compactMap({ document -> DayNetworkObject? in
-                return try? document.data(as: DayNetworkObject.self)
+    private func fetchData() {
+        cancellable = service.fetchData()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { error in
+                print(error)
+            }, receiveValue: { documents in
+                let dayNetworkObjects = documents.compactMap({ document -> DayNetworkObject? in
+                    try? document.data(as: DayNetworkObject.self)
+                })
+                self.days = .init(items: dayNetworkObjects.map { .init(from: $0) })
             })
-            self.days = .init(items: dayNetworkObjects.map { .init(from: $0) })
-        }
+    }
+
+    func getCurrentDayNumber() -> Int {
+        let timeZone = Double(TimeZone.current.secondsFromGMT())
+        let day = Calendar.current.component(.weekdayOrdinal, from: Date().addingTimeInterval(timeZone))
+        return day
     }
 }

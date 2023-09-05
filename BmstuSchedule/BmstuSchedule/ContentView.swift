@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var model = ScheduleViewModel()
     @State private var selectedIndex: Int = 0
-    
+
     var body: some View {
         VStack {
             TabView(selection: $selectedIndex) {
@@ -22,12 +22,16 @@ struct ContentView: View {
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .onAppear {
-                model.fetchData()
-            }
 
-            TabBarView(tabbarItems: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"], selectedIndex: $selectedIndex)
+            TabBarView(
+                tabbarItems: model.days.items.map { $0.getDayName() },
+                selectedIndex: $selectedIndex
+            )
                 .padding(.horizontal)
+        }
+        .statusBarHidden(false)
+        .onAppear {
+            selectedIndex = model.getCurrentDayNumber()
         }
     }
 }
@@ -44,7 +48,11 @@ struct TabBarView: View {
                 HStack {
                     ForEach(tabbarItems.indices, id: \.self) { index in
                      
-                        TabbarItem(name: tabbarItems[index], isActive: selectedIndex == index, namespace: menuItemTransition)
+                        TabbarItem(
+                            name: tabbarItems[index],
+                            isActive: selectedIndex == index,
+                            namespace: menuItemTransition
+                        )
                             .onTapGesture {
                                 withAnimation(.easeInOut) {
                                     selectedIndex = index
