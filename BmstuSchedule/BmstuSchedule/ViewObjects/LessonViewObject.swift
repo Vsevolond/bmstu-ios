@@ -57,9 +57,9 @@ struct LessonViewObject: Identifiable {
     func isStarted() -> Bool {
         let currentDate = Date()
         let timeZone = Double(TimeZone.current.secondsFromGMT())
-        let day = Calendar.current.component(.weekdayOrdinal, from: currentDate.addingTimeInterval(timeZone))
+        let day = Calendar.current.component(.weekday, from: currentDate.addingTimeInterval(timeZone))
 
-        guard self.day == day + 1 else {
+        guard self.day == day - 2 else {
             return false
         }
 
