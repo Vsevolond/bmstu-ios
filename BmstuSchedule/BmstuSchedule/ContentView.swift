@@ -15,7 +15,10 @@ struct ContentView: View {
                         .listRowSeparator(.hidden)
                         .listRowBackground(
                             RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.white)
+                                .foregroundColor(
+                                    light: .white,
+                                    dark: .gray.opacity(0.2)
+                                )
                                 .padding(5)
                         )
                     }
@@ -94,7 +97,10 @@ struct TabbarItem: View {
                 .font(.subheadline)
                 .padding(.horizontal)
                 .padding(.vertical, 4)
-                .foregroundColor(.black)
+                .foregroundColor(
+                    light: .black,
+                    dark: .white.opacity(0.5)
+                )
         }
     }
 }
