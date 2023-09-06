@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var model = ScheduleViewModel()
     @State private var selectedIndex: Int = 0
-    
+
     var body: some View {
         VStack {
             TabView(selection: $selectedIndex) {
@@ -22,12 +22,16 @@ struct ContentView: View {
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .onAppear {
-                model.fetchData()
-            }
 
-            TabBarView(tabbarItems: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"], selectedIndex: $selectedIndex)
+            TabBarView(
+                tabbarItems: model.days.items.map { $0.getDayName() },
+                selectedIndex: $selectedIndex
+            )
                 .padding(.horizontal)
+        }
+        .statusBarHidden(false)
+        .onAppear {
+            selectedIndex = model.getCurrentDayNumber()
         }
     }
 }
@@ -44,7 +48,11 @@ struct TabBarView: View {
                 HStack {
                     ForEach(tabbarItems.indices, id: \.self) { index in
                      
-                        TabbarItem(name: tabbarItems[index], isActive: selectedIndex == index, namespace: menuItemTransition)
+                        TabbarItem(
+                            name: tabbarItems[index],
+                            isActive: selectedIndex == index,
+                            namespace: menuItemTransition
+                        )
                             .onTapGesture {
                                 withAnimation(.easeInOut) {
                                     selectedIndex = index
@@ -94,6 +102,15 @@ struct TabbarItem: View {
 struct LessonView: View {
     let lesson: LessonViewObject
     @State var isFullName = false
+    @State var isStarted = false
+    @State var currentValue: Double?
+    @State var leftTime: String?
+    
+    let timer = Timer.publish(
+        every: 1,
+        on: .current,
+        in: .common
+    ).autoconnect()
 
     var body: some View {
         VStack {
@@ -130,9 +147,30 @@ struct LessonView: View {
                     }
                 }
             }
-            Gauge(value: 0.5) {
-                Text("Осталось 1ч 15м")
-            }.gaugeStyle(LinearTextInsideGaugeStyle())
+            if isStarted {
+                Gauge(value: currentValue ?? 0) {
+                    Text("Осталось \(leftTime ?? "")")
+                }.gaugeStyle(LinearTextInsideGaugeStyle())
+            }
+        }
+        .onAppear(perform: {
+            updateTime()
+        })
+        .onReceive(timer) { _ in
+            updateTime()
+        }
+    }
+
+    private func updateTime() {
+        isStarted = lesson.isStarted()
+        if isStarted {
+            withAnimation(.easeOut) {
+                currentValue = lesson.currentValue()
+            }
+            leftTime = lesson.leftTime()
+        } else {
+            currentValue = nil
+            leftTime = nil
         }
     }
 }

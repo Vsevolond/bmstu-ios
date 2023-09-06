@@ -10,6 +10,7 @@ struct LessonNetworkObject: Codable {
     var teacherName: String?
     var startTime: String
     var endTime: String
+    var day: Int
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -21,5 +22,6 @@ struct LessonNetworkObject: Codable {
         case teacherName = "teacher_name"
         case startTime = "start_time"
         case endTime = "end_time"
+        case day
     }
 }
