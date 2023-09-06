@@ -11,6 +11,7 @@
 		A01CBDFA2AA369A8009B73DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01CBDF92AA369A8009B73DD /* ContentView.swift */; };
 		A01CBDFC2AA369AA009B73DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01CBDFB2AA369AA009B73DD /* Assets.xcassets */; };
 		A01CBDFF2AA369AA009B73DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01CBDFE2AA369AA009B73DD /* Preview Assets.xcassets */; };
+		A096D93E2AA88BDF001E2D1C /* ViewColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096D93D2AA88BDF001E2D1C /* ViewColorExtension.swift */; };
 		EF1211552AA6408700506880 /* GaugeStyleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1211542AA6408700506880 /* GaugeStyleExtension.swift */; };
 		EF370D602AA7B10500DFE0DA /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF370D5F2AA7B10500DFE0DA /* FirebaseService.swift */; };
 		EF7C89C82AA3C2C80010C9FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EF7C89C72AA3C2C80010C9FB /* FirebaseFirestore */; };
@@ -32,6 +33,7 @@
 		A01CBDF92AA369A8009B73DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A01CBDFB2AA369AA009B73DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01CBDFE2AA369AA009B73DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A096D93D2AA88BDF001E2D1C /* ViewColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColorExtension.swift; sourceTree = "<group>"; };
 		EF1211542AA6408700506880 /* GaugeStyleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeStyleExtension.swift; sourceTree = "<group>"; };
 		EF370D5F2AA7B10500DFE0DA /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		EF7C89CD2AA3C3250010C9FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				EF7C89DF2AA491590010C9FB /* TimeIntervalExtension.swift */,
 				EF1211542AA6408700506880 /* GaugeStyleExtension.swift */,
+				A096D93D2AA88BDF001E2D1C /* ViewColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				EF7C89DD2AA48C3C0010C9FB /* LessonViewObject.swift in Sources */,
 				A01CBDF82AA369A8009B73DD /* BmstuScheduleApp.swift in Sources */,
 				EF7C89E32AA49AAA0010C9FB /* SortedArray.swift in Sources */,
+				A096D93E2AA88BDF001E2D1C /* ViewColorExtension.swift in Sources */,
 				EF1211552AA6408700506880 /* GaugeStyleExtension.swift in Sources */,
 				EF7C89D92AA3C9290010C9FB /* ScheduleViewModel.swift in Sources */,
 				EF7C89DB2AA48C2B0010C9FB /* DayViewObject.swift in Sources */,
