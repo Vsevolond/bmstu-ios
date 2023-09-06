@@ -164,7 +164,9 @@ struct LessonView: View {
     private func updateTime() {
         isStarted = lesson.isStarted()
         if isStarted {
-            currentValue = lesson.currentValue()
+            withAnimation(.easeOut) {
+                currentValue = lesson.currentValue()
+            }
             leftTime = lesson.leftTime()
         } else {
             currentValue = nil
