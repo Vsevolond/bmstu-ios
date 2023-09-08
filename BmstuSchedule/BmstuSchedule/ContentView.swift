@@ -23,6 +23,9 @@ struct ContentView: View {
                         )
                     }
                 }
+                .onAppear {
+                    selectedIndex = model.getCurrentDayNumber()
+                }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
 
@@ -30,12 +33,9 @@ struct ContentView: View {
                 tabbarItems: model.days.items.map { $0.getDayName() },
                 selectedIndex: $selectedIndex
             )
-                .padding(.horizontal)
+            .padding(.horizontal)
         }
         .statusBarHidden(false)
-        .onAppear {
-            selectedIndex = model.getCurrentDayNumber()
-        }
     }
 }
 

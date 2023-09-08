@@ -25,8 +25,7 @@ class ScheduleViewModel: ObservableObject {
     }
 
     func getCurrentDayNumber() -> Int {
-        let timeZone = Double(TimeZone.current.secondsFromGMT())
-        let day = Calendar.current.component(.weekday, from: Date().addingTimeInterval(timeZone))
+        let day = Calendar.current.component(.weekday, from: Date())
         return day - 2
     }
 }
