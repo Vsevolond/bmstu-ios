@@ -5,37 +5,48 @@ struct ContentView: View {
     @State private var selectedIndex: Int = 0
 
     var body: some View {
-        VStack {
-            TabView(selection: $selectedIndex) {
-                ForEach(model.days.items.indices, id: \.self) { index in
-                    List {
-                        ForEach(model.days.items[index].lessons.items) { lesson in
-                            LessonView(lesson: lesson)
+        NavigationView {
+            VStack {
+                TabView(selection: $selectedIndex) {
+                    ForEach(model.days.items.indices, id: \.self) { index in
+                        List {
+                            ForEach(model.days.items[index].lessons.items) { lesson in
+                                ZStack {
+                                    NavigationLink {
+                                        Text(lesson.name)
+                                    } label: {
+                                        EmptyView()
+                                    }
+
+                                    LessonView(lesson: lesson)
+                                }
+                            }
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .foregroundColor(
+                                        light: .white,
+                                        dark: .gray.opacity(0.2)
+                                    )
+                                    .padding(5)
+                            )
                         }
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(
-                            RoundedRectangle(cornerRadius: 20)
-                                .foregroundColor(
-                                    light: .white,
-                                    dark: .gray.opacity(0.2)
-                                )
-                                .padding(5)
-                        )
+                    }
+                    .onAppear {
+                        selectedIndex = model.getCurrentDayNumber()
                     }
                 }
-                .onAppear {
-                    selectedIndex = model.getCurrentDayNumber()
-                }
-            }
-            .tabViewStyle(.page(indexDisplayMode: .never))
+                .tabViewStyle(.page(indexDisplayMode: .never))
 
-            TabBarView(
-                tabbarItems: model.days.items.map { $0.getDayName() },
-                selectedIndex: $selectedIndex
-            )
-            .padding(.horizontal)
+                TabBarView(
+                    tabbarItems: model.days.items.map { $0.getDayName() },
+                    selectedIndex: $selectedIndex
+                )
+                .padding(.horizontal)
+            }
+            .statusBarHidden(false)
+            .navigationTitle("Расписание")
         }
-        .statusBarHidden(false)
     }
 }
 
@@ -107,6 +118,7 @@ struct TabbarItem: View {
 
 struct LessonView: View {
     let lesson: LessonViewObject
+
     @State var isFullName = false
     @State var isStarted = false
     @State var currentValue: Double?
