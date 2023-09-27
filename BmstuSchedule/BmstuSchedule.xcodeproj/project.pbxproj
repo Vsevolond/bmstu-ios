@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A006FE392AC2F1C900795770 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006FE382AC2F1C900795770 /* LessonView.swift */; };
+		A006FE3B2AC2F25300795770 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006FE3A2AC2F25300795770 /* TabBarItem.swift */; };
+		A006FE3D2AC2F27400795770 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006FE3C2AC2F27400795770 /* TabBarView.swift */; };
+		A006FE3F2AC2F42900795770 /* ConfigureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006FE3E2AC2F42900795770 /* ConfigureView.swift */; };
 		A01CBDF82AA369A8009B73DD /* BmstuScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01CBDF72AA369A8009B73DD /* BmstuScheduleApp.swift */; };
 		A01CBDFA2AA369A8009B73DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01CBDF92AA369A8009B73DD /* ContentView.swift */; };
 		A01CBDFC2AA369AA009B73DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01CBDFB2AA369AA009B73DD /* Assets.xcassets */; };
 		A01CBDFF2AA369AA009B73DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01CBDFE2AA369AA009B73DD /* Preview Assets.xcassets */; };
 		A096D93E2AA88BDF001E2D1C /* ViewColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096D93D2AA88BDF001E2D1C /* ViewColorExtension.swift */; };
+		A09EDC1B2AC37097008ECA7D /* LessonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDC1A2AC37097008ECA7D /* LessonType.swift */; };
+		A09EDC1D2AC370B9008ECA7D /* DayName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDC1C2AC370B9008ECA7D /* DayName.swift */; };
+		A09EDC1F2AC373EB008ECA7D /* LessonsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDC1E2AC373EB008ECA7D /* LessonsTabView.swift */; };
 		EF1211552AA6408700506880 /* GaugeStyleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1211542AA6408700506880 /* GaugeStyleExtension.swift */; };
 		EF370D602AA7B10500DFE0DA /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF370D5F2AA7B10500DFE0DA /* FirebaseService.swift */; };
 		EF7C89C82AA3C2C80010C9FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EF7C89C72AA3C2C80010C9FB /* FirebaseFirestore */; };
@@ -28,12 +35,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A006FE382AC2F1C900795770 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		A006FE3A2AC2F25300795770 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		A006FE3C2AC2F27400795770 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		A006FE3E2AC2F42900795770 /* ConfigureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureView.swift; sourceTree = "<group>"; };
 		A01CBDF42AA369A8009B73DD /* BmstuSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BmstuSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01CBDF72AA369A8009B73DD /* BmstuScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmstuScheduleApp.swift; sourceTree = "<group>"; };
 		A01CBDF92AA369A8009B73DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A01CBDFB2AA369AA009B73DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01CBDFE2AA369AA009B73DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A096D93D2AA88BDF001E2D1C /* ViewColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewColorExtension.swift; sourceTree = "<group>"; };
+		A09EDC1A2AC37097008ECA7D /* LessonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonType.swift; sourceTree = "<group>"; };
+		A09EDC1C2AC370B9008ECA7D /* DayName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayName.swift; sourceTree = "<group>"; };
+		A09EDC1E2AC373EB008ECA7D /* LessonsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsTabView.swift; sourceTree = "<group>"; };
 		EF1211542AA6408700506880 /* GaugeStyleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeStyleExtension.swift; sourceTree = "<group>"; };
 		EF370D5F2AA7B10500DFE0DA /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		EF7C89CD2AA3C3250010C9FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -60,6 +74,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A006FE372AC2F1A700795770 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A01CBDF92AA369A8009B73DD /* ContentView.swift */,
+				A006FE382AC2F1C900795770 /* LessonView.swift */,
+				A006FE3A2AC2F25300795770 /* TabBarItem.swift */,
+				A006FE3C2AC2F27400795770 /* TabBarView.swift */,
+				A006FE3E2AC2F42900795770 /* ConfigureView.swift */,
+				A09EDC1E2AC373EB008ECA7D /* LessonsTabView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A01CBDEB2AA369A8009B73DD = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +106,8 @@
 		A01CBDF62AA369A8009B73DD /* BmstuSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				A09EDC192AC37087008ECA7D /* Entity */,
+				A006FE372AC2F1A700795770 /* Views */,
 				EF370D5E2AA7B0F500DFE0DA /* Services */,
 				EF7C89E12AA49A9D0010C9FB /* Tools */,
 				EF7C89DE2AA491470010C9FB /* Extensions */,
@@ -87,7 +116,6 @@
 				EF7C89D12AA3C6320010C9FB /* NetworkObjects */,
 				EF7C89CD2AA3C3250010C9FB /* GoogleService-Info.plist */,
 				A01CBDF72AA369A8009B73DD /* BmstuScheduleApp.swift */,
-				A01CBDF92AA369A8009B73DD /* ContentView.swift */,
 				A01CBDFB2AA369AA009B73DD /* Assets.xcassets */,
 				A01CBDFD2AA369AA009B73DD /* Preview Content */,
 			);
@@ -100,6 +128,15 @@
 				A01CBDFE2AA369AA009B73DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A09EDC192AC37087008ECA7D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A09EDC1A2AC37097008ECA7D /* LessonType.swift */,
+				A09EDC1C2AC370B9008ECA7D /* DayName.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		EF370D5E2AA7B0F500DFE0DA /* Services */ = {
@@ -237,13 +274,20 @@
 				A01CBDFA2AA369A8009B73DD /* ContentView.swift in Sources */,
 				EF370D602AA7B10500DFE0DA /* FirebaseService.swift in Sources */,
 				EF7C89DD2AA48C3C0010C9FB /* LessonViewObject.swift in Sources */,
+				A006FE3B2AC2F25300795770 /* TabBarItem.swift in Sources */,
+				A09EDC1F2AC373EB008ECA7D /* LessonsTabView.swift in Sources */,
+				A006FE392AC2F1C900795770 /* LessonView.swift in Sources */,
 				A01CBDF82AA369A8009B73DD /* BmstuScheduleApp.swift in Sources */,
 				EF7C89E32AA49AAA0010C9FB /* SortedArray.swift in Sources */,
+				A09EDC1B2AC37097008ECA7D /* LessonType.swift in Sources */,
 				A096D93E2AA88BDF001E2D1C /* ViewColorExtension.swift in Sources */,
 				EF1211552AA6408700506880 /* GaugeStyleExtension.swift in Sources */,
+				A09EDC1D2AC370B9008ECA7D /* DayName.swift in Sources */,
 				EF7C89D92AA3C9290010C9FB /* ScheduleViewModel.swift in Sources */,
+				A006FE3F2AC2F42900795770 /* ConfigureView.swift in Sources */,
 				EF7C89DB2AA48C2B0010C9FB /* DayViewObject.swift in Sources */,
 				EF7C89D42AA3C6520010C9FB /* LessonNetworkObject.swift in Sources */,
+				A006FE3D2AC2F27400795770 /* TabBarView.swift in Sources */,
 				EF7C89E02AA491590010C9FB /* TimeIntervalExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -355,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -370,6 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BmstuSchedule/Preview Content\"";
@@ -388,6 +433,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vsevolond.BmstuSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -399,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BmstuSchedule/Preview Content\"";
@@ -417,6 +464,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vsevolond.BmstuSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

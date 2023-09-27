@@ -11,12 +11,6 @@ struct LessonViewObject: Identifiable {
     var endTime: String
     var day: Int
 
-    enum LessonType: String, CaseIterable {
-        case lecture = "Лекция"
-        case seminar = "Семинар"
-        case laboratory = "Лабораторная"
-    }
-
     init(from networkObject: LessonNetworkObject) {
         self.name = networkObject.name
         self.office = networkObject.office ?? ""

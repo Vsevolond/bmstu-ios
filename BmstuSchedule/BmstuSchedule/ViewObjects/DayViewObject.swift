@@ -10,15 +10,6 @@ struct DayViewObject: Identifiable {
         self.lessons = .init(items: networkObject.lessons.map { LessonViewObject(from: $0) })
     }
 
-    private enum DayName: String, CaseIterable {
-        case monday = "Понедельник"
-        case tuesday = "Вторник"
-        case wednesday = "Среда"
-        case thursday = "Четверг"
-        case friday = "Пятница"
-        case saturday = "Суббота"
-    }
-
     func getDayName() -> String {
         DayName.allCases[day].rawValue
     }
